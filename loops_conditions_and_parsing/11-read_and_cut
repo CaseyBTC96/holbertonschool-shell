@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#Write a Bash script that displays the content of the file /etc/passwd.
+#Your script should only display:
+#username
+#user id
+#Home directory path for the user
+
+while ifs=: read -r c1 _ c3 _ _ c6 _
+do 
+	echo "$c1:$c3:$c6"
+done < /etc/passwd	
